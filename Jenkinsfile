@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'export HTTP_PROXY=http://10.215.140.1:8888;export HTTPS_PROXY=https://10.215.140.1:8888;npm install'
             }
         }
         stage('Test') {
